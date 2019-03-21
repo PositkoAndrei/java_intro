@@ -1,6 +1,7 @@
 package HW_8;
 
 public class Processor {
+
     public void findCarsByBrend(Auto[] cars, String brend) {
         System.out.println("CarsByBrend => " + brend);
 
