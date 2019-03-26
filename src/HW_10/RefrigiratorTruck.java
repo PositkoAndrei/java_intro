@@ -1,18 +1,41 @@
 package HW_10;
 
 public class RefrigiratorTruck extends Truck {
-    int coldTemperature;
-    int hotTemperature;
+    private int coldTemperature;
+    private int hotTemperature;
 
-    RefrigiratorTruck (String typeOfEngine, String brand, String model, String color, int price,
-                       int maksSpeed, int registerNumber, double consumption) {
+    RefrigiratorTruck (String typeOfEngine, String brand, int price,
+                       int maksSpeed, int consumption) {
 
-        super(typeOfEngine, brand, model, color, price, maksSpeed, registerNumber, consumption);
+        super(typeOfEngine, brand, price, maksSpeed, consumption);
         this.coldTemperature = coldTemperature;
         this.hotTemperature = hotTemperature;
     }
-
+    public int getColdTemperature() {
+        return coldTemperature;
+    }
+    public void setColdTemperature(int coldTemperature) {
+        this.coldTemperature = coldTemperature;
+    }
+    public int getHotTemperature() {
+        return hotTemperature;
+    }
+    public void setHotTemperature(int hotTemperature) {
+        this.hotTemperature = hotTemperature;
+    }
+    @Override
     public String toString() {
-        return super.toString();
+        return "Car {" +
+                "typeOfEngine=' " + typeOfEngine + '\'' +
+                "brand=' " + brand + '\'' +
+                "price=' " + getPrice() +
+                "maxSpeed=' " + getMaxSpeed() +
+                "consumption=' " + getConsumption() +
+                "coldTemperature=' " + getColdTemperature() +
+                "hotTemperature=' " + getHotTemperature() +
+                '}';
+
+
+
     }
 }

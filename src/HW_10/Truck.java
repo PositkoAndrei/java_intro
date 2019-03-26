@@ -1,16 +1,32 @@
 package HW_10;
 
 public class Truck extends Car {
-    int cargocapacity;
+    private int cargocapacity;
 
-    Truck(String typeOfEngine, String brand, String model, String color, int price,
-          int maksSpeed, int registerNumber, double consumption) {
+    Truck(String typeOfEngine, String brand, int price,
+          int maksSpeed, int consumption) {
 
-        super(typeOfEngine, brand, model, color, price, maksSpeed, registerNumber, consumption);
+        super(typeOfEngine, brand, price, maksSpeed, consumption);
         this.cargocapacity = cargocapacity;
     }
 
+    public int getCargocapacity() {
+        return cargocapacity;
+    }
+
+    public void setCargocapacity(int cargocapacity) {
+        this.cargocapacity = cargocapacity;
+    }
+
+    @Override
     public String toString() {
-        return super.toString();
+        return "Car{" +
+                "typeOfEngine='" + typeOfEngine + '\'' +
+                ", brand='" + brand + '\'' +
+                ", price=" + getPrice() +
+                ", maxSpeed=" + getMaxSpeed() +
+                ", consumption=" + getConsumption() +
+                ", cargocapacity =" + cargocapacity+
+                '}';
     }
 }

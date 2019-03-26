@@ -1,17 +1,29 @@
 package HW_10;
 
 public class AmphibianCar extends Car {
-    int propeller;
+    private int propeller;
 
-    AmphibianCar(String typeOfEngine, String brand, String model, String color, int price,
-                 int maksSpeed, int registerNumber, double consumption) {
+    AmphibianCar(String typeOfEngine, String brand, int price,
+                 int maksSpeed, int consumption) {
 
-        super(typeOfEngine, brand, model, color, price, maksSpeed, registerNumber, consumption);
+        super(typeOfEngine, brand, price, maksSpeed, consumption);
         this.propeller = propeller;
-
     }
-
+    public int getPropeller() {
+        return propeller;
+    }
+    public void setPropeller(int propeller) {
+        this.propeller = propeller;
+    }
+    @Override
     public String toString() {
-        return super.toString();
+        return "Car{" +
+                "typeOfEngine='" + typeOfEngine + '\'' +
+                ", brand='" + brand + '\'' +
+                ", price=" + getPrice() +
+                ", maxSpeed=" + getMaxSpeed() +
+                ", consumption=" + getConsumption() +
+                ", propeller =" + propeller +
+                '}';
     }
 }

@@ -3,14 +3,22 @@ package HW_10;
 public class LiquidTruck extends Truck {
     int typeOfOil;
 
-    LiquidTruck (String typeOfEngine, String brand, String model, String color, int price,
-                 int maksSpeed, int registerNumber, double consumption) {
+    LiquidTruck (String typeOfEngine, String brand, int price,
+                 int maksSpeed, int consumption) {
 
-        super(typeOfEngine, brand, model, color, price, maksSpeed, registerNumber, consumption);
+        super(typeOfEngine, brand, price, maksSpeed, consumption);
         this.typeOfOil = typeOfOil;
     }
 
+    @Override
     public String toString() {
-        return super.toString();
+        return "Car{" +
+                "typeOfEngine='" + typeOfEngine + '\'' +
+                ", brand='" + brand + '\'' +
+                ", price=" + getPrice() +
+                ", maxSpeed=" + getMaxSpeed() +
+                ", consumption=" + getConsumption() +
+                ", typeOfOil =" + typeOfOil +
+                '}';
     }
 }

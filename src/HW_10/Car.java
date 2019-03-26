@@ -4,30 +4,52 @@ public class Car {
 
     String typeOfEngine;
     String brand;
-    String model;
-    String color;
-    int price;
-    int maxSpeed;
-    int registerNumber;
-    double consumption;
+    private int price;
+    private int maxSpeed;
+    private int consumption;
 
-    Car(String typeOfEngine, String brand, String model, String color, int price,
-        int maxSpeed, int registerNumber, double consumption) {
+    Car(String typeOfEngine, String brand, int price,
+        int maxSpeed, int consumption) {
         this.typeOfEngine = typeOfEngine;
         this.brand = brand;
-        this.model = model;
-        this.color = color;
         this.price = price;
         this.maxSpeed = maxSpeed;
-        this.registerNumber = registerNumber;
         this.consumption = consumption;
     }
 
-    public String toString() {
-        return "Type of Engine: " + this.typeOfEngine + "Brand: " + this.brand +
-                "Model: " + model + "Color: " + color + "Price: " + price + "Maks Speed: "
-                + maxSpeed + "Register Number: " + registerNumber + "Consumption: "
-                + consumption;
+//    public Car (int price, int maxSpeed) {
+//        this (price, 0, maxSpeed);
+//    }
+    public int getPrice() {
+        return price;
+    }
 
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public int getMaxSpeed() {
+        return maxSpeed;
+    }
+
+    public void setMaxSpeed(int maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
+     public int getConsumption() {
+        return consumption;
+     }
+      public void setConsumption(int consumption) {
+        this.consumption = consumption;
+      }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "typeOfEngine='" + typeOfEngine + '\'' +
+                ", brand='" + brand + '\'' +
+                ", price=" + price +
+                ", maxSpeed=" + maxSpeed +
+                ", consumption=" + consumption +
+                '}';
     }
 }
