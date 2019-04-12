@@ -17,6 +17,7 @@ public class TaxiParkRunner {
                          85)};
 
         TaxiPark Park = new TaxiPark(cars);
+
         System.out.println(Park.priceOfPark());
         System.out.println();
 
